@@ -29,5 +29,18 @@ namespace Progetto.Models.Studenti
         public string PhotoFileName { get; set; }
         public Double GradePointAverage { get; set; }
 
+
+        public override string ToString()
+        {
+            String c = $"ToString overrided {base.ToString()}";
+
+            StringBuilder SB = new StringBuilder();
+
+            SB.AppendLine(c);
+            SB.AppendLine(this.FirstName);
+            SB.AppendLine(this.LastName);
+
+            return SB.ToString();
+        }
     }
 }

@@ -9,5 +9,15 @@ namespace Progetto.Models.Studenti.Ereditarieta
     public class StudenteMedie:Studente
     {
         public int Classe { get; set; }
+
+        public override string ToString()
+        {
+            String c = $"ToString overrided {base.ToString()}";
+            StringBuilder SB = new StringBuilder();
+            SB.Append(c);
+            SB.Append(Classe.ToString());
+
+            return SB.ToString();
+        }
     }
 }

@@ -2,9 +2,11 @@
 using Progetto.Models.Studenti.Ereditarieta;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Progetto.Tests
 {
@@ -67,7 +69,36 @@ namespace Progetto.Tests
                 Console.WriteLine("Studente vecchio è studente");
             }
 
-            // Console.WriteLine("Hello world");
+            var StudenteUniversitario4 = new StudenteUniversita();
+
+            // UpCasting dell'oggetto
+            Studente Studente4 = StudenteUniversitario4;
+
+            // DownCasting
+            Studente4 = (StudenteUniversita)StudenteUniversitario4;
+
+            Studente Studente5 = (Studente)Studente4;
+            var stud = new Studente();
+
+            // Cast diretto che da exception a run time (ma non a design time)
+            // !!! StudenteUniversita StudenteUniversita6 = (StudenteUniversita)stud;
+
+            // Cast indiretto che imposta a null l'oggetto se non riesce
+            StudenteUniversita StudenteUniversita7 = stud as StudenteUniversita;
+            if (StudenteUniversita7 == null)
+                Console.WriteLine("Cast ok ma oggetto null");
+
+            StudenteUniversita7 = (StudenteUniversita7==null) 
+                ? new StudenteUniversita {
+                    FirstName ="Nome Assegnato",
+                    LastName="Cognome Assegnato",
+                    Facoltà="Facoltà Assegnata"
+                } : StudenteUniversita7;
+           
+            Console.WriteLine(StudenteUniversita7.ToString()); 
+
+
+            Console.WriteLine("Hello world");
             Console.ReadLine();
 
         }
@@ -79,6 +110,7 @@ namespace Progetto.Tests
 
         static void StampaFacolta(StudenteUniversita Studente)
         {
+            
             Console.WriteLine($" la facoltà è : {Studente.Facoltà }");
         }
     }
