@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progetto.Tests", "Progetto.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progetto.TestFileSystemIO", "Progetto.TestFileSystemIO\Progetto.TestFileSystemIO.csproj", "{E35B30F6-0E4C-47BB-9C20-E96A10F0EF86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Progetto.TestSerializzazioneXML", "Progetto.TestSerializzazioneXML\Progetto.TestSerializzazioneXML.csproj", "{F8D16794-39D0-41A0-8022-18C3207421E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E35B30F6-0E4C-47BB-9C20-E96A10F0EF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E35B30F6-0E4C-47BB-9C20-E96A10F0EF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E35B30F6-0E4C-47BB-9C20-E96A10F0EF86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D16794-39D0-41A0-8022-18C3207421E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D16794-39D0-41A0-8022-18C3207421E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D16794-39D0-41A0-8022-18C3207421E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D16794-39D0-41A0-8022-18C3207421E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
