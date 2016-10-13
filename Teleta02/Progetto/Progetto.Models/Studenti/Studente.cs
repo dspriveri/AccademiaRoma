@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Progetto.Models.Studenti
 {
@@ -12,6 +13,7 @@ namespace Progetto.Models.Studenti
         public string FirstName { get; set; }
 
         private string sesso;
+        [XmlIgnore]
         public string Sex {
             get
             {
@@ -23,11 +25,11 @@ namespace Progetto.Models.Studenti
             }
         }
 
-        public string  MiddleName { get; set; }
-        public string  LastName { get; set; }
+        public string MiddleName { get; set; } = "MR.Default";
+        public string LastName { get; set; } = "";
 
-        public string PhotoFileName { get; set; }
-        public Double GradePointAverage { get; set; }
+        public string PhotoFileName { get; set; } = "No Photo";
+        public Double GradePointAverage { get; set; } = 2;
 
 
         public override string ToString()
