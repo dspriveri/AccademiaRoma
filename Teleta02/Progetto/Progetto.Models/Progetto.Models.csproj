@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Studenti\Ereditarieta\StudenteMedie.cs" />
+    <Compile Include="Studenti\Ereditarieta\StudenteUniversita.cs" />
     <Compile Include="Studenti\StudentBody.cs" />
     <Compile Include="Studenti\Studente.cs" />
     <Compile Include="Studenti\Studenti.cs" />

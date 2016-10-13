@@ -1,4 +1,5 @@
 ﻿using Progetto.Models.Studenti;
+using Progetto.Models.Studenti.Ereditarieta;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,14 +36,50 @@ namespace Progetto.Tests
             var ListaStudenti2 = Lista_di_Stringhe.
                 Select(x => new Studente { FullName = x });
 
-            foreach (var item in ListaStudenti1)
+            //foreach (var item in ListaStudenti1)
+            //{
+            //    Console.WriteLine(item.FullName);
+            //}
+
+            var StudenteMedie1 = new StudenteMedie { Classe = 1, FullName = "Pierino" } ;
+
+            var StudenteUniversitario = new StudenteUniversita { Facoltà = "Lettere", FullName = "Paperino" };
+
+            var StudenteVecchio = new Studente ();
+
+            
+
+            StudenteVecchio = StudenteMedie1;
+            Console.WriteLine($"Confronto istanze :{StudenteVecchio == StudenteMedie1}  ");
+
+            Console.WriteLine($"Il tipo di StudenteVecchio è {StudenteVecchio.GetType()}");
+
+            Console.WriteLine($"Il Nome dell'istanza di studente vecchio è {nameof(StudenteVecchio)}");
+
+            //   StudenteVecchio = StudenteMedie1 as StudenteMedie;
+
+            StampaFullName(StudenteVecchio);
+            StampaFullName(StudenteUniversitario);
+            StampaFacolta(StudenteUniversitario);
+
+            if (StudenteVecchio is Studente)
             {
-                Console.WriteLine(item.FullName);
+                Console.WriteLine("Studente vecchio è studente");
             }
 
-           // Console.WriteLine("Hello world");
+            // Console.WriteLine("Hello world");
             Console.ReadLine();
 
+        }
+
+        static void StampaFullName(Studente Studente)
+        {
+            Console.WriteLine($" Il fullname è : {Studente.FullName }");
+        }
+
+        static void StampaFacolta(StudenteUniversita Studente)
+        {
+            Console.WriteLine($" la facoltà è : {Studente.Facoltà }");
         }
     }
 }
