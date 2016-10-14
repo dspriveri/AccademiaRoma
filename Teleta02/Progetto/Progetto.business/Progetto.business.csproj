@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD163601-74F7-4C14-BF19-A58698EA8994}</ProjectGuid>
+    <ProjectGuid>{944B17B8-7872-4E1C-B575-FFBC0CD030D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Progetto.Models</RootNamespace>
-    <AssemblyName>Progetto.Models</AssemblyName>
+    <RootNamespace>Progetto.business</RootNamespace>
+    <AssemblyName>Progetto.business</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,15 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Prodotti\Product.cs" />
+    <Compile Include="ViewModelStudenti.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Studenti\Ereditarieta\StudenteMedie.cs" />
-    <Compile Include="Studenti\Ereditarieta\StudenteUniversita.cs" />
-    <Compile Include="Studenti\Estensioni\EstensioniStudente.cs" />
-    <Compile Include="Studenti\StudentBody.cs" />
-    <Compile Include="Studenti\Studente.cs" />
-    <Compile Include="Studenti\Studenti.cs" />
-    <Compile Include="Studenti\ViewModelStudente.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Progetto.client.wpf\Progetto.client.wpf.csproj">
+      <Project>{fd942a7b-16b2-40f3-96a2-cfcf29891c80}</Project>
+      <Name>Progetto.client.wpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Progetto.Models\Progetto.Models.csproj">
+      <Project>{dd163601-74f7-4c14-bf19-a58698ea8994}</Project>
+      <Name>Progetto.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Progetto.Servizi\Progetto.Servizi.csproj">
+      <Project>{80256343-cc58-48f9-a30e-853d0adbbd9b}</Project>
+      <Name>Progetto.Servizi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,11 @@ namespace Progetto.Servizi.Studenti.Implementations
 {
     public class DbRead : IServizioStudenti
     {
+        public ObservableCollection<Student> GetObservableSchool(string FilePath)
+        {
+            throw new NotImplementedException();
+        }
+
         public StudentBody GetSchool(string FilePath)
         {
             throw new NotImplementedException();

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace Progetto.Servizi.Studenti.Interfaces
 {
@@ -11,8 +12,9 @@ namespace Progetto.Servizi.Studenti.Interfaces
     {
         List<Student> GetStudents(string FilePath);
 
-        StudentBody GetSchool(String FilePath);
+        StudentBody GetSchool(string FilePath);
 
+        ObservableCollection<Student> GetObservableSchool(string FilePath);
 
         //Student GetStudent(String FullName);
 
