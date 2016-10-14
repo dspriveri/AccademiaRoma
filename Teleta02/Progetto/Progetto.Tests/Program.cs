@@ -14,29 +14,29 @@ namespace Progetto.Tests
     {
         static void Main(string[] args)
         {
-            Studente lIstanza = new Studente();
-            var lIstanza2 = new Studente();
+            Student lIstanza = new Student();
+            var lIstanza2 = new Student();
 
             lIstanza.FullName = "Pietro Morello";
             lIstanza.FirstName = "Pietro";
             lIstanza.LastName = "Morello";
             lIstanza.Sex = "M";
             lIstanza.GradePointAverage = 10.0;
-            var lIstanza3 = new Studente { FirstName = "Giacomo", LastName = "Lengueglia" };
+            var lIstanza3 = new Student { FirstName = "Giacomo", LastName = "Lengueglia" };
 
             var Lista_di_Stringhe = new List<String>();
             Lista_di_Stringhe.Add("Gianni Sassanelli");
             Lista_di_Stringhe.Add("Vincenzo Iacobelli");
 
-            var ListaStudenti1 = new List<Studente>();
+            var ListaStudenti1 = new List<Student>();
 
             foreach (var item in Lista_di_Stringhe)
             {
-                ListaStudenti1.Add( new Studente { FullName = item });
+                ListaStudenti1.Add( new Student { FullName = item });
             }
 
             var ListaStudenti2 = Lista_di_Stringhe.
-                Select(x => new Studente { FullName = x });
+                Select(x => new Student { FullName = x });
 
             //foreach (var item in ListaStudenti1)
             //{
@@ -47,7 +47,7 @@ namespace Progetto.Tests
 
             var StudenteUniversitario = new StudenteUniversita { Facoltà = "Lettere", FullName = "Paperino" };
 
-            var StudenteVecchio = new Studente ();
+            var StudenteVecchio = new Student ();
 
             
 
@@ -64,7 +64,7 @@ namespace Progetto.Tests
             StampaFullName(StudenteUniversitario);
             StampaFacolta(StudenteUniversitario);
 
-            if (StudenteVecchio is Studente)
+            if (StudenteVecchio is Student)
             {
                 Console.WriteLine("Studente vecchio è studente");
             }
@@ -72,13 +72,13 @@ namespace Progetto.Tests
             var StudenteUniversitario4 = new StudenteUniversita();
 
             // UpCasting dell'oggetto
-            Studente Studente4 = StudenteUniversitario4;
+            Student Studente4 = StudenteUniversitario4;
 
             // DownCasting
             Studente4 = (StudenteUniversita)StudenteUniversitario4;
 
-            Studente Studente5 = (Studente)Studente4;
-            var stud = new Studente();
+            Student Studente5 = (Student)Studente4;
+            var stud = new Student();
 
             // Cast diretto che da exception a run time (ma non a design time)
             // !!! StudenteUniversita StudenteUniversita6 = (StudenteUniversita)stud;
@@ -103,7 +103,7 @@ namespace Progetto.Tests
 
         }
 
-        static void StampaFullName(Studente Studente)
+        static void StampaFullName(Student Studente)
         {
             Console.WriteLine($" Il fullname è : {Studente.FullName }");
         }

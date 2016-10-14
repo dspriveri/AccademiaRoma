@@ -8,6 +8,6 @@ namespace Progetto.Models.Studenti
 {
     public class ElencoStudenti
     {
-        public List<Studente> Studenti { get; set; }
+        public List<Student> Studenti { get; set; }
     }
 }

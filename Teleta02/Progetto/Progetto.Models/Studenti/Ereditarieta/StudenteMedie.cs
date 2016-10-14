@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Progetto.Models.Studenti.Ereditarieta
 {
-    public class StudenteMedie:Studente
+    public class StudenteMedie:Student
     {
         public int Classe { get; set; }
 

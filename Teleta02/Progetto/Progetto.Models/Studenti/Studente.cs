@@ -7,13 +7,13 @@ using System.Xml.Serialization;
 
 namespace Progetto.Models.Studenti
 {
-    public class Studente
+    public class Student
     {
         public string  FullName { get; set; }
         public string FirstName { get; set; }
 
         private string sesso;
-        [XmlIgnore]
+       // [XmlIgnore]
         public string Sex {
             get
             {
@@ -28,7 +28,7 @@ namespace Progetto.Models.Studenti
         public string MiddleName { get; set; } = "MR.Default";
         public string LastName { get; set; } = "";
 
-        public string PhotoFileName { get; set; } = "No Photo";
+        public string PhotoFilename { get; set; } = "No Photo";
         public Double GradePointAverage { get; set; } = 2;
 
 
